@@ -36,7 +36,7 @@ To be more specific Policies either grant or deny the ability to call a specific
 
 An example policy below:
 
-```json
+```javascript
 {
   "Version": "2012-10-17",
   "Statement": [
@@ -61,7 +61,7 @@ Roles
  * Used to delegate access to AWS Resources
  * Can be assigned to an AWS Resource (ie EC2 instance) or third party accounts (ie. another AWS account or SAML 2.0)
  * Up to 10 policies can be assigned to a role (this is new, it used to be 2)
- * Roles CANNOT be assigned to Users or Groups
+ * Roles usualy are not assigned to Users or Groups
 
 Users & Groups
 
