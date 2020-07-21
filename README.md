@@ -4,7 +4,7 @@ Officical exam guide
 [https://d1.awsstatic.com/training-and-certification/docs-dev-associate/AWS_Certified_Developer_Associate-Exam_Guide_EN_1.4.pdf]
 
 
-## IAM (Identity access management)
+# IAM (Identity access management)
 
 Essentialy, IAM allows you to manage users and their level of access to the AWS Console. It is important to understand IAM and how it works, both for the exam and for administratioing a comany's AWS account in real life
 
@@ -73,3 +73,33 @@ ie. Developers, Admins, DevOps
 * Up to 10 policies per group
 
 The AWS recommend security practice is to use Roles wherever possible to handle authentication for applications. So for example if you have a web server which needs to access RDS instances, and S3 buckets; instead of creating a user for authentication to those resources, and have the AWS Access Key's for that user saved on the web server in a config file somewhere; you would create a role with the relevant policies applied and assign the role to the EC2 instance used by the web server.
+
+
+<img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fscriptcrunch.com%2Fwp-content%2Fuploads%2F2017%2F11%2Faws-iam.jpg&f=1&nofb=1">
+
+# Amazone Elastic Compute Cloud (Amazone EC2)
+
+EC2 - is a web service that rpovide resizable compute capacity in the cloud. You can provision Virtual Machines in a minutes, allowing quickly scale copacity, as your requiremnts load is changed
+
+EC2 Options:
+
+ - On Demand - allows you to pay fixed rate by the hour(or by second) with no commitment.
+
+ - Reserved - provides you with  a capacity reservation and offer a significant discount on the hourly charge for an instance of terms of 1 or 3 year.
+
+ - Spot - enables you bid whatewer price you want for instance capacity, providing for even greater savings if your application have felxibile start and end times.
+
+- Dedicated Hosts - phisical EC2 server dedicated for your use. Dedicated Hosts can help you reduce costs by allowing you to use your existing server-bound software licenses.
+
+
+<img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmedia.amazonwebservices.com%2Fblog%2F2013%2Fec2_instance_types_table_1.png&f=1&nofb=1">
+
+<img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fscriptcrunch.com%2Fwp-content%2Fuploads%2F2016%2F08%2Finstance-deatils_mini.jpg&f=1&nofb=1">
+
+# Amazone EBS
+
+Amazone EBS allows you to create storage volumes and attach them to Amazone EC2 instance. Once attached, you can create a file system on top of these volumes, run a database, or use them in any other way you would use a block device. Amazone EBS volumes are placed in a specific Availability Zone, where they are automaticaly replicated to protect you from the failure of a single component.
+
+<img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimage.slidesharecdn.com%2Fsqlpass-export-170317032122%2F95%2Fbest-practices-running-sql-server-on-aws-35-638.jpg%3Fcb%3D1489721091&f=1&nofb=1" />
+
+There is a greate article explaining EBS(https://intellipaat.com/blog/what-is-aws-ebs-in-amazon/)
