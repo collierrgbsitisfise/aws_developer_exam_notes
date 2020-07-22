@@ -122,4 +122,13 @@ Type Of Load Balancers:
 
 There is a grate article explaining ELB (https://mindmajix.com/what-is-aws-elb)
 
+# Route53
 
+Route53 - is Amazon's DNS server
+
+Allows to map domain name to:
+  - EC2 Instances
+  - Load Balancers
+  - S3 Buckets
+
+There is article about Route53: https://cloudacademy.com/blog/route53-dns-migration/ , but i would say it's more needed for AWS associate solutions architect
