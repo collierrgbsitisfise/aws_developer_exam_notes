@@ -103,3 +103,23 @@ Amazone EBS allows you to create storage volumes and attach them to Amazone EC2 
 <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimage.slidesharecdn.com%2Fsqlpass-export-170317032122%2F95%2Fbest-practices-running-sql-server-on-aws-35-638.jpg%3Fcb%3D1489721091&f=1&nofb=1" />
 
 There is a greate article explaining EBS(https://intellipaat.com/blog/what-is-aws-ebs-in-amazon/)
+
+# Elastic Load Balancer (ELB)
+
+ELB - helps to distribute the load between the available computing power (EC2, Lambdas...)
+
+
+Type Of Load Balancers:
+  - Application Load Balancer:
+    are best suited for load balancing of HTTP(S) traffic. They operate at layer 7 (https://en.wikipedia.org/wiki/OSI_model).There is possibility to create advanced routing, sending specific request to specific web servers.
+
+  - Network Load Balancer:
+    are best suited for load balanacing of TCP traffic where extreme performance is required. Operating at layer 4(https://en.wikipedia.org/wiki/OSI_model). Network Load Balancer are capable to handle up to million of requests per second, while maintaining ultra-low latencies.
+
+  - Classic Load Balancer:
+    are the legacy Elastic Load Balancers. You can load balance HTTP/HTTPS applications and use Layer 7 specific features, such as X-Forwarded and sticky sessions. You can also use strict Layer 4 load balancing for applications that on the TCP protocol.
+
+
+There is a grate article explaining ELB (https://mindmajix.com/what-is-aws-elb)
+
+
