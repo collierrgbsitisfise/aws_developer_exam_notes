@@ -165,4 +165,21 @@ Each of these Database software is offered as Software as a Service (saas) by pr
 
  * There are two purchase options for AWS RDS service. On-Demand Instances and Reserved Instances. For on-Demand instance you pay for every hour of usage while for Reserved instance you make a upfront payment for one year to three period time frame.
 
- resorce of RDS part: https://www.tutorialspoint.com/amazonrds/amazonrds_overview.htm
+ resource of **this** RDS part was provided by: https://www.tutorialspoint.com/amazonrds/amazonrds_overview.htm
+
+### Automated backup
+
+**T**here are two types of Backup for AWS: Automated Backup and Database Snapshots.
+
+**A**utomated Backup allows you to recover your database at any point in time within a "retention preriod". The retention period can be between one and 35 days. Automated Backup will take a full daily snapshot and will also store transaction logs throughout the day. When you do a revovery, AWS will first choose the most recent daily backup, and then apply transaction logs relevant to that day. This allows you to do a point in time revovery to a second, within the retation period.
+
+**S**napshots are done manually. They are stored even after you delete the original RDS instance, unlike automated backups.
+
+### Multi-AZ RDS
+Multi-AZ RDS allows you to have an exact copy of your production database in another Availability Zone. AWS handles the replication for you.In the case DB will fail Amazone RDS will automaticly failover to the standby so the database operations can resume quickly without administrative intervetion.
+
+**!!!** Multi-AZ is for **Disaster Recovery** only. It is not used for performance improving, for that you need to use **Read Replica**
+
+### Read Replica
+
+Read Replica allow you to have a read-only copy of your production database. This is achived by using ASynchronouse replication from the primary RDS instance to the read replica.You use read replica primarly for very-heavy database workloads.
