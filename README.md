@@ -131,4 +131,38 @@ Allows to map domain name to:
   - Load Balancers
   - S3 Buckets
 
-There is article about Route53: https://cloudacademy.com/blog/route53-dns-migration/ , but i would say it's more needed for AWS associate solutions architect
+There is article about Route53: https://cloudacademy.com/blog/route53-dns-migration/ , but i would say it's more needed for AWS associate solutions architect exam.
+
+# RDS
+
+Amazon RDS is the Relational Database Service offered as a web service by Amazon. It makes it easy to set-up and operate a relational database in the cloud. It provides a very cost-effective way to use industry’s leading RDBMS software as a managed service. Because of this web service from amazon AWS, You do not have to buy any server or install any database software in it. You just have subscribe to the AWS RDS web service and start using the RDBMS features after some initial configuration involving memory and CPU capacity allocation etc . In this Tutorial we will learn about the different interfaces available in AWS RDS to use the industry’s leading RDBMS software.
+
+As RDS is a managed service provided by AWS, we can expect that like other AWS services it will provide scalability, security and cost effectiveness to the various RDBMS it provides. The database products available through AWS RDS are as listed below.
+
+ * MySQL - Support versions for MySQL 5.5 to 5.7. Minor upgrades happen  automatically without needing any involvement from the user.
+
+ * MariaDB – Support versions for MariaDB from 10.0 to 10.2.
+
+ * Oracle – Supports version 11g and 12c. You can use the oracle license provided by aws or bring your own license. The costing for these two are different.
+
+ * Microsoft SQL Server – Supports version 200t to 2017. Also AWS supports the various editions like – Enterprise, Standard, Web and Express.
+
+ * PostgreSQL – Supports version 9 to 11. Can be configured as a multi A-Z deployment with read replicas.
+
+ * Amazon Aurora – This is Amazon’s own RDBMS. We will be covering it in a separate tutorial.
+
+Each of these Database software is offered as Software as a Service (saas) by providing following features.
+
+ * Customization of CPU capacity, Memory allocation and IOPS(Input Output per second) for a database instance.
+
+ * Manage software patching, failure and recovery of the RDBMS software without any user intervention.
+
+ * Allow manual or automated backup of the database using snapshots. Restore the database from these snapshots.
+
+ * Provide high availability by creating a primary and secondary instance which are synchronous. In case of a failure of primary AWS RDS automatically fails over to secondary.
+
+ * Put the databases in a virtual private cloud (VPC) and aslo use AWS IAM (Identity and Access management) service to control access to the databases.
+
+ * There are two purchase options for AWS RDS service. On-Demand Instances and Reserved Instances. For on-Demand instance you pay for every hour of usage while for Reserved instance you make a upfront payment for one year to three period time frame.
+
+ resorce of RDS part: https://www.tutorialspoint.com/amazonrds/amazonrds_overview.htm
