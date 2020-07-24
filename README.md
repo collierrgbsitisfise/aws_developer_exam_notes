@@ -217,3 +217,6 @@ Redis use cases:
   * Is persistence of your key store important ? 
 
   * Do you want to run im multiple AWS Availability Zone with failover ?
+
+
+<img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimage.slidesharecdn.com%2Fdat204-151008030810-lva1-app6892%2F95%2Fdat204-nosql-no-worries-build-scalable-apps-on-aws-nosql-services-23-638.jpg%3Fcb%3D1444273964&f=1&nofb=1">
