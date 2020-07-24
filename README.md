@@ -176,10 +176,44 @@ Each of these Database software is offered as Software as a Service (saas) by pr
 **S**napshots are done manually. They are stored even after you delete the original RDS instance, unlike automated backups.
 
 ### Multi-AZ RDS
-Multi-AZ RDS allows you to have an exact copy of your production database in another Availability Zone. AWS handles the replication for you.In the case DB will fail Amazone RDS will automaticly failover to the standby so the database operations can resume quickly without administrative intervetion.
+Multi-AZ RDS allows you to have an exact copy of your production database in another Availability Zone. AWS handles the replication for you. In the case DB will fail Amazone RDS will automaticly failover to the standby so the database operations can resume quickly without administrative intervetion.
 
 **!!!** Multi-AZ is for **Disaster Recovery** only. It is not used for performance improving, for that you need to use **Read Replica**
 
 ### Read Replica
 
 Read Replica allow you to have a read-only copy of your production database. This is achived by using ASynchronouse replication from the primary RDS instance to the read replica.You use read replica primarly for very-heavy database workloads.
+
+# ElasticCache
+
+ElasticCache is a web service that makes it easy to deploy, operate and scale an in-memory cache in the cloud. The service improves the performance of web apllication by allowing you to retrive information from fast, managed, in-memory caches, instead of relying entirely on slower disk-based databases.
+
+Common use cases of Redis usage(http://highscalability.com/blog/2011/7/6/11-common-web-use-cases-solved-in-redis.html)
+
+Types of elasticcache:
+
+  * Memcached(https://www.memcached.org/)
+  * Redis(https://redis.io/)
+
+Although both  Memcached and Redis appear similar on the surface (in that are both in-memory key space), they are actiualy quite different in practice. Because of the replication abd presistence feature of Redis, ElasticCache manages Redis more as stateful database. Redis ElasticCache manages Redis more as stateful enitities that include failover, similar to how Amazone RDS manages database failover.
+
+Because Memcached is a designed as a pure caching solution with no persistence, Elastic manages Memcached nodejs as pool that can grow and shrink, similar to an Amazone EC2 Auto Scaling Group. Individual nodes are expendable and ElasticCache provides additional capabililities here, such as automatic node replacement and Auto Discovery.
+
+Memcached use cases:
+ * Is object caching your primary goal, for example to offload your database ? 
+
+ * Are you interested in as simple caching model as possible ?
+
+ * Are planing on running large cache nodes and  require multithreaded performance with utilization of multiple cores ?
+
+ * Do you want the ability to scale you cache horizontaly as you grow ?
+
+Redis use cases:
+
+  * Are you looking for more advanced data types, such as lists, hases and sets ?
+
+  * Does sorging and ranking datasests in memory help you, such as with leaderboards ?
+
+  * Is persistence of your key store important ? 
+
+  * Do you want to run im multiple AWS Availability Zone with failover ?
