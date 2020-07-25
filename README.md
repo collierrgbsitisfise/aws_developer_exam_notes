@@ -250,3 +250,11 @@ S3 is Object based. Objcet consist of the following:
  * Glacier - very cheep, but used for archival only. Optimised for data that is infrequently accessed and it take 3 - 5 hours to restore from Glacier.
 
  <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi1.wp.com%2Fjayendrapatil.com%2Fwp-content%2Fuploads%2F2016%2F03%2Fscreen-shot-2016-03-29-at-8-16-24-am.png%3Fresize%3D656%252C208&f=1&nofb=1">
+
+ ### S3 - security
+
+  * By default all newly created buckets are PRIVTE
+  * You can set up access control to you buckets using:
+      - Buckets Policies - Applied at a bucket level
+      - Access Controll List - Applied at an object level
+  * S3 buckets can configured to create a   ccess logs, which log all requests made to the s3 bucket. These logs can be written to another bucket.
