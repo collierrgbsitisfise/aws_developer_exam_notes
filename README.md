@@ -258,3 +258,14 @@ S3 is Object based. Objcet consist of the following:
       - Buckets Policies - Applied at a bucket level
       - Access Controll List - Applied at an object level
   * S3 buckets can configured to create a   ccess logs, which log all requests made to the s3 bucket. These logs can be written to another bucket.
+
+### S3 - encryption 
+  - In Transit:
+    * SSL/TLS
+
+  - At Rest:
+    * S3 Managed Keys - ***SSE-S3***
+    * AWS Key Management Service, Managed Keys, ***SSE-KMS***
+    * Server Side Encryption with Customer Provided Keys - ***SSE-C***
+
+  -  Client Side Encryption
