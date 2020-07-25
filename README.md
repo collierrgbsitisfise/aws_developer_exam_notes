@@ -220,3 +220,33 @@ Redis use cases:
 
 
 <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimage.slidesharecdn.com%2Fdat204-151008030810-lva1-app6892%2F95%2Fdat204-nosql-no-worries-build-scalable-apps-on-aws-nosql-services-23-638.jpg%3Fcb%3D1444273964&f=1&nofb=1">
+
+# S3
+
+S3 provides developers and IT teams with  secure, durable, highly-scalable object storage. Amazone S3 is easy to use, with a simple web service interface to store and retrive any amount of data from anywhere on the web
+
+### Data consistancy Model for S3
+
+* Read after Write consistancy for PUT of new Objects
+* Eventualy Consistancy for overwrite PUTS and DELETE(can take some time to propogate)
+
+
+S3 is Object based. Objcet consist of the following:
+  - Key(This is simply the name of the object)
+  - Value(This is simply the data, which is made up of a sequence of bytes)
+  - Version ID (Important for versioning)
+  - Metadata (Data about the data you are storing)
+  - Subresourcer:
+      * Bucket Polices, Access Control Lists
+      * Cross Origin Resource Sharing (CORS)
+      * Transfer Acceleration
+
+### S3 - storage classes
+
+  * S3: 99.99% availability, 99.999999999% durability, stored redundantly across multiple devices in multiple facilities, and is designed to sustain the loss of 2 facilities concurrrently.
+  * S3 -  IA(Infequntly Accessed): For data that accessed less frequently but requires rapid access when needed, Lower fee than S3, but you are charged a retrieval fee.
+  * S3 - One Zone IA: Same as IA however data is stored in a single AZ only, still 99.999999999% durability, but only 99.5% availability. Cost is 20% less than regular S3 - IA.
+  * Reduced Redundancy Storage: Designed to provide 99.99% durablility and 99.99% avalability.
+ * Glacier - very cheep, but used for archival only. Optimised for data that is infrequently accessed and it take 3 - 5 hours to restore from Glacier.
+
+ <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi1.wp.com%2Fjayendrapatil.com%2Fwp-content%2Fuploads%2F2016%2F03%2Fscreen-shot-2016-03-29-at-8-16-24-am.png%3Fresize%3D656%252C208&f=1&nofb=1">
