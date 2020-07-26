@@ -296,3 +296,8 @@ CloudFront - Key terminology
 Amazone S3 Transfer Acceleration enables fast, easy and secure transfer of files over long distances between your end user and an S3 bucket.
 
 Transfer Acceleration takes advantage of Amazone CloudFront's globallydistribituted edge locations. As the data arrives at an edge location. data is routed to Amazone S3 over an optimized network path.
+
+### S3 Performance Optiomizations
+
+* GET-intensive Workload - Use CloudFront
+* Mixed-Workload - Avoid sequential key names for your S3 objects. Instead add a random prefix like a hex hash to the key name to prevent multiple objects from being stored on the same partition.
