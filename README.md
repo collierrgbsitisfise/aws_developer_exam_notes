@@ -269,3 +269,30 @@ S3 is Object based. Objcet consist of the following:
     * Server Side Encryption with Customer Provided Keys - ***SSE-C***
 
   -  Client Side Encryption
+
+  If you want to enforce the use of encryption for your files stored in S3 use an S3 Bucket Policy to deny all PUT request that don't include the `x-amz-server-side-encryption` in the request header.
+
+# Cloudfront (AWS CDN)
+
+What is CDN ?
+
+ CDN(content dilevery network) is a systen of distributed servers(network) that delivery webpages and other web contentto a user based on the geographic location of the user, the origin of the webpage and ontent deliver server.
+
+
+CloudFront - Key terminology
+
+  * Edge Location - This is the location where content is cached and can also be writen. Separate to an AWS Region/AZ
+
+  * Origin - This is the origin of all files that the CDN will distribute. Origins can be an S3 Bucket, an EC2 Instance, an Elastic Load Balancer or Route53.
+
+  * Distribution - This is the name given the CDN, which consists of a collection of Edge Locations.
+
+  * Web Destribition - Typically used fo Website.
+
+  * RTMP - Used for Media Streaming.
+
+### Cloudfront and S3 Transfer Acceleration
+
+Amazone S3 Transfer Acceleration enables fast, easy and secure transfer of files over long distances between your end user and an S3 bucket.
+
+Transfer Acceleration takes advantage of Amazone CloudFront's globallydistribituted edge locations. As the data arrives at an edge location. data is routed to Amazone S3 over an optimized network path.
