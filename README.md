@@ -327,3 +327,15 @@ also pretty much recommend all articles from `serverless-transformation`: https:
 
   - Architectures can get extremely complicated, AWS X-ray allows you to debug waht is happening
   - Lambda can do things globally, you can use it to back up S3 buckets to other S3 buckets etc
+
+## Versioning
+
+When you use **versioning** in AWS Lambda, you can publish one or more versions of your Lambda function. As a result, you can work with different variations of your Lambda function in your development workflow, such as development, beta and production.
+
+Each Lambda function version has a unique Amazone REsource Name(ARN). After you publish a verison, it is immutable(that is it cat't be changed)
+
+- Could be multiple versions of lambda function
+- Latest version will use **$LATEST**
+- Qualified verison will use **$LATEST**, uniquealified will not have it.
+- Can split traffic using aliases to different versions
+- Can not split trafic with **$LATEST**, insted create an alias to lates
