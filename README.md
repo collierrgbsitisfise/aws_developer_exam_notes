@@ -301,3 +301,29 @@ Transfer Acceleration takes advantage of Amazone CloudFront's globallydistribitu
 
 * GET-intensive Workload - Use CloudFront
 * Mixed-Workload - Avoid sequential key names for your S3 objects. Instead add a random prefix like a hex hash to the key name to prevent multiple objects from being stored on the same partition.
+
+
+# Servrless
+
+https://brandlitic.com/what-is-serverless-architecture/
+
+https://www.experfy.com/blog/choosing-a-serverless-architecture-for-application-development/
+
+also pretty much recommend all articles from `serverless-transformation`: https://medium.com/serverless-transformation
+
+## Lambda
+
+**AWS Lambda** is a compute service where you can upload your code and create Lambda function. AWS Lambda takes care of provisionning and monitoring the servers that you use to run the code. You don't have to worry about operating systems, pathcing, scaling,  etc. You can use Lambda in the following ways.
+
+ * As an event-driven compute service where AWS Lambda runs your code in response to events. These events could be changes to data in an Amazone S3 bucket or an Amazone DynamoDB table.
+ * As a comute service to run your code in response to HTTP requests using Amazone API Gateway or API calls made using AWS SDKs.
+
+ Lambda exam tips:
+  
+  - Lambda scales out(not up) automatically
+  - Lambda functions are independent, 1 event = 1 funciton
+  - Lambda a serverless
+  - Lambda function can trigger other lambda functions, 1 event can = x functions.
+
+  - Architectures can get extremely complicated, AWS X-ray allows you to debug waht is happening
+  - Lambda can do things globally, you can use it to back up S3 buckets to other S3 buckets etc
