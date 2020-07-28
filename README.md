@@ -343,3 +343,19 @@ Each Lambda function version has a unique Amazone REsource Name(ARN). After you 
 ## Step Function
 
 SF - allows you to visualize and test your serverless application. Step Function provides a graphical console to arrange and visualize the components of your application as a series of steps. This makes it simple to build and run multistep applications. Step Function automatically triggers and tracks each step and retries when there are erros, so your application executes in order and as expected. Step Function logs the state of each step, so when things do go wrong you can diagnose nad debug problems quickl.
+
+SP:
+ - Greate way to visualize your serverless application
+ - Step Function automatically triggers and track each step
+ - Step Fcuntions logs the state of each step so if something goes wrong you can track what went wrong.
+
+## AWS X-RAY
+
+AWS X-RAY is a service that collects data about requests that your application serves and provide tools you can use to view, fileter and gain insights into that dta to identify issues and opportunities for optimization. For any traced request to your application you can see detailed information not only about the request and response but also about calls, that your application makes to downstream AWS resoureces, microservices, databases and HTTP web APIs.
+
+X-RAY integrates with the following AWS services:
+  * Elastic Load Balancing
+  * AWS Lambda
+  * Amazone API Gateway
+  * Amazone EC2
+  * AWS Elastic Beanstalk
