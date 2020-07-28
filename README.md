@@ -339,3 +339,7 @@ Each Lambda function version has a unique Amazone REsource Name(ARN). After you 
 - Qualified verison will use **$LATEST**, uniquealified will not have it.
 - Can split traffic using aliases to different versions
 - Can not split trafic with **$LATEST**, insted create an alias to lates
+
+## Step Function
+
+SF - allows you to visualize and test your serverless application. Step Function provides a graphical console to arrange and visualize the components of your application as a series of steps. This makes it simple to build and run multistep applications. Step Function automatically triggers and tracks each step and retries when there are erros, so your application executes in order and as expected. Step Function logs the state of each step, so when things do go wrong you can diagnose nad debug problems quickl.
