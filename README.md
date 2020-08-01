@@ -413,3 +413,15 @@ There is two type of indexies:
 For example with our user table GSI: Partition Key - email address, Sort Key - last log-in date.
 
 <img src="https://secureservercdn.net/160.153.137.15/3d9.249.myftpupload.com/wp-content/uploads/2017/03/DynamoDB-Secondary-Indexes-GSI-vs-LSI.png">
+
+## Query and Scan
+
+**Query** - find items in a table based on the Primary Key attribute and distinct value to search for.
+
+By default a Query returns all the attributes for the items but you can use the **ProjectionExpression** parameter if you want the query to only return the specific attributes you want.
+
+Results are always sorted by Sort Key.Numeric order -by default in ascending. ASCII character code value. You can reverse the order by setting the **ScanIndexForward** parameter.
+
+By default Queries are Eventualy Consistent.You need to explicitly set the query to be Strong Consistent.
+
+**Scan** operation examines every item in the table. By default returns all attribute. Use **ProjectionExpression** parameter to refine the scan to only return the attributes you want.
