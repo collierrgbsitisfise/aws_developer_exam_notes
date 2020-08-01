@@ -425,3 +425,20 @@ Results are always sorted by Sort Key.Numeric order -by default in ascending. AS
 By default Queries are Eventualy Consistent.You need to explicitly set the query to be Strong Consistent.
 
 **Scan** operation examines every item in the table. By default returns all attribute. Use **ProjectionExpression** parameter to refine the scan to only return the attributes you want.
+
+## DynamoDB Provisioned Throughput
+
+DynamoDB Probisoned Throughput is measured in Capacity Units. When you create table, you specify your requirements in terms of **Read Capacity Units** and **Write Capacity Units**
+
+1 x **Write Capacity Units** = 1 x 1KB write per second
+1 x **Read Capacity Units** = 1 x **Strong Consistant Read** of  4KB per second OR 2 x Eventualy Consistent Read of 4KB per second (default)
+
+With **On-Deman** you don't need to specify your requirements (read/write capacity).DynamoDB instantly scales up and down based on the activity of your application.
+
+## DynamoDB Accelerator(or DAX)
+
+**DAX** is fully managed, clustered in-memory cache for DynamoDB.
+
+- DElivers up to a 10x read performance improvement
+- Microsecond perfomance for mullions of requests per second
+- Ideal for Read-Heavy and brusty workloads.
