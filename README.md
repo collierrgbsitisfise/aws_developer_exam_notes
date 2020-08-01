@@ -303,7 +303,7 @@ Transfer Acceleration takes advantage of Amazone CloudFront's globallydistribitu
 * Mixed-Workload - Avoid sequential key names for your S3 objects. Instead add a random prefix like a hex hash to the key name to prevent multiple objects from being stored on the same partition.
 
 
-# Servrless
+# Serverless
 
 https://brandlitic.com/what-is-serverless-architecture/
 
@@ -359,3 +359,32 @@ X-RAY integrates with the following AWS services:
   * Amazone API Gateway
   * Amazone EC2
   * AWS Elastic Beanstalk
+
+# DynamoDB
+
+DynamoDB is a fast and flexible NoSQL database service for all applications that need consistent, single-digit mulliseconds latency at any scale. It is a fully managed database and supports both document and key-value data models. Is is flexible data model and relible performance make it great fit for modbile, web, gamin, ad-tech, IoT applications.
+
+Consistency  models:
+
+ **Eventually Consistent Reads**: Consistancy across all copies of data usually reached within a second. Repeating a read after a short time should return the updated data. (Best Read Performance)
+
+ **Strongly Consistent Reads**: A strongly consistant read returns a result that reflects all writes that received a successful response prior to the read.
+ 
+## DynamoDB - Primary Keys
+
+* DynamoDB stores and retrives data based on a Primary Key
+
+* 2 types of Primary Key:
+  - **Partition Key** - unique attribute(e.g userID). Value of the Partition key us input to an internal hash function which determines the partition of physical location on which the data is stored. If you are using the Partition Key as your Primary Key, then no two items can have the same Partition Key.
+
+  - **Composite Key(Partition Key + Sort Key)** - For example: The same user posting multiple times to a forum. Partition Key is **UserId** and Sort key if **timestamp** (time when post was published). Few items may have the same Partition Key, but must have a different Sort Key. All Items within the same Partition Key are stored together, then sorted according to the Sort Key value.
+
+## DynamoDB Access Control
+
+* Authintication and Access Control is managed using AWS IAM
+
+* You can create IAM user within your AWS account which has specific permissions to access and create DynamoDB tables.
+
+* You can create IAM role which enables you to obtain temporary access keys which can be used to access DynamoDB.
+
+* You can also use a special IAM Condition to restrict a user access to only their own records.
