@@ -388,3 +388,28 @@ Consistency  models:
 * You can create IAM role which enables you to obtain temporary access keys which can be used to access DynamoDB.
 
 * You can also use a special IAM Condition to restrict a user access to only their own records.
+
+## Indexies
+
+There is two type of indexies:
+ * Local Secondary Index
+ * Glabal Secondary Index
+
+**Local Secondary Index**:
+ - Can only be created when are creating a table
+ - You can not add, remove or modify it later
+ - It has the same Partition Key as your original table, but different sort key
+ - Gives you a different view of your data, organised according to an alternative Sort Key
+ - Any queries based on this Sort Key are much faster using the index than main table
+ For example with our user table one of local secondary idnex could be: Partition Key - User ID, Sort Key - account creation date.
+
+ **Global Secondary Index**
+
+- You can create when you create your table or add it later
+- Different Partition Key as well as Different Sort Key
+- So gives a completely different view of the data
+- Speed up any queries realting to this alternative Partition and Sort Key
+
+For example with our user table GSI: Partition Key - email address, Sort Key - last log-in date.
+
+<img src="https://secureservercdn.net/160.153.137.15/3d9.249.myftpupload.com/wp-content/uploads/2017/03/DynamoDB-Secondary-Indexes-GSI-vs-LSI.png">
