@@ -442,3 +442,43 @@ With **On-Deman** you don't need to specify your requirements (read/write capaci
 - DElivers up to a 10x read performance improvement
 - Microsecond perfomance for mullions of requests per second
 - Ideal for Read-Heavy and brusty workloads.
+
+## Elasticache in front of you DynamoDB
+
+ *  Improve performance of read-heavy worloads
+ *  Frequently-accessed data in stored in memory for low-latency access, improving the overall performance of application
+ * Good for compute heavy worloads
+ * Can be used to store results of I/O intensive database queries or compute-intensive calculations.
+
+ Caching strategies: 
+
+ ***Lazy Loading*** - Loads the data into the cache ony when necessary. If requested data in in the cache, Elasticache returns the data.If the data is not in the cache or has expired, Elasticache returns null.Your application then fetches the data from the database and writes the data received into the cache so that it is available next time
+
+ ***Write Through*** - adds or updates data to the cache whenever data is written to the database.
+
+## Dynamodb transactions
+
+ * ACID Transactions (Atomic, Consistent, Isolated, Durable)
+ * Read of write multiple items across multiple tables as an all or nothing operation
+ * Check for a pre-requisite condition before writing to a table.
+
+## DynamoDB TTL
+  * Time To Live(TTL) attribute defines an expiry time for your data
+  * Expired items marked for deletion
+  * Greate for removing irrelevant or old data:
+    * Session data
+    * Event Logs
+    * Temporary data
+  * Reduces cost by automatically removing data which is no longer relevant.
+
+## DynamoDB Streams
+
+DynamoDB stream - time ordered sequence of item level modifictions (insert, upated, delete). Logs are encrypted at rest and stored for 24 hours. Accessed using a dedicated endpoint.By default the Primary Key is recorded. Before and After iamger can be captured.
+
+Processing DynamoDB Stream:
+
+* Event are recorded in near real-time
+* Application can take actions based on contents
+* Event sourcing for Lambda
+* Lambda polls the DynamoDB stream
+* Executes Lambda code based on a DynamoDB Streams event.
