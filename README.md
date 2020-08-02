@@ -372,9 +372,7 @@ Consistency  models:
  
 ## DynamoDB - Primary Keys
 
-* DynamoDB stores and retrives data based on a Primary Key
-
-* 2 types of Primary Key:
+* DynamoDB stores and retrives data based on a Primary Key 2 types of Primary Key:
   - **Partition Key** - unique attribute(e.g userID). Value of the Partition key us input to an internal hash function which determines the partition of physical location on which the data is stored. If you are using the Partition Key as your Primary Key, then no two items can have the same Partition Key.
 
   - **Composite Key(Partition Key + Sort Key)** - For example: The same user posting multiple times to a forum. Partition Key is **UserId** and Sort key if **timestamp** (time when post was published). Few items may have the same Partition Key, but must have a different Sort Key. All Items within the same Partition Key are stored together, then sorted according to the Sort Key value.
@@ -396,7 +394,7 @@ There is two type of indexies:
  * Glabal Secondary Index
 
 **Local Secondary Index**:
- - Can only be created when are creating a table
+ - Can only be created when you are creating a table
  - You can not add, remove or modify it later
  - It has the same Partition Key as your original table, but different sort key
  - Gives you a different view of your data, organised according to an alternative Sort Key
