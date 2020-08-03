@@ -480,3 +480,19 @@ Processing DynamoDB Stream:
 * Event sourcing for Lambda
 * Lambda polls the DynamoDB stream
 * Executes Lambda code based on a DynamoDB Streams event.
+
+# KMS (Key Management Service)
+
+It is a management service that makes it easy for you to create and control the encryption keys used to encrypt your data. AWS KMS is integrated with other AWS services including EBS, S3, Amazone REdshift, Amazone Elsatic Transcoder, Amazone WorkMail, Amazone Relational Database Service(RDS) and other to make it simple to encrypt your data with encryption keys that you manage
+
+**The Customer MasterKey**:
+  * alias
+  * cereation date
+  * description
+  * key state
+  * key material(either customer provided or AWS provided)
+  * Can never be exported
+
+Types of keys
+ * **Customer Master Key** is used to decrypt thedata key (envelopr key)
+ * **Envelope Key** is used to decrypt the data
