@@ -496,3 +496,24 @@ It is a management service that makes it easy for you to create and control the 
 Types of keys
  * **Customer Master Key** is used to decrypt thedata key (envelopr key)
  * **Envelope Key** is used to decrypt the data
+
+# SQL (Simple Queue Service)
+
+It's a web service that gives you access to message queue that can be used to store messages while waiting for a computer to process them. SQS is distributed queue system that ebables web service applications to quick and reliable queue messages that once component in the application generates to be consumed by another component. A queue is a temporary repository for messages that are waiting to be preccesed.
+
+Using SQS yoy can decouple the components of an application so they run independantly, easing message management between components. Any components of a distributed application can store messages in the queue. Messages can contain up to 256KB of text in any format. Any component can later retrive the messages programmatically using the Amazon SQS API.
+
+There are two types of Queue:
+ * Standart Queues (default)
+ * FIFO Queues (First-In-First-Out)
+
+**Standart Queues** - offers nearly-ultimated numbers of transactions per second.Guaratee that message is delivered at least once. However, occasionally more than one copy of a message might be delivered out of order. Standart queue provide best-effort ordering which ensures that messages are generally delivered in the same order as they are sent.
+
+**FIFO Queues** - complements the standart queue. The most important feature of this queue are FIFO delivery and exactly once processing: The order in which messages are sent and received is strictly preserved and message is delivered once and remains available unitl a consumer processes and delete it; duplicates are not introduced into the queue. FIFO queues also support messages groups that allows multiple ordered messages groups within a single queue. FIFO queues are limited to 300 transactions per secon (TPS), but have all the capabilities of standart queues.
+
+<img src="https://k2y3h8q6.stackpathcdn.com/wp-content/uploads/2018/12/AWS-Training-Amazon-SQS-1.jpg">
+
+https://blog.mailtrap.io/amazon-sqs-tutorial/
+https://tutorialsdojo.com/amazon-sqs/
+
+
