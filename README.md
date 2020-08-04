@@ -543,3 +543,15 @@ https://stackshare.io/stackups/amazon-ses-vs-amazon-sns
 https://dev.to/exampro/sns-vs-sqs-aws-messaging-services-know-the-difference-49p
 
 https://stackoverflow.com/questions/13681213/what-is-the-difference-between-amazon-sns-and-amazon-sqs
+
+# Kinesis
+
+Amazon Kinesis Streams are used to gather together and process huge streams of data records in real-time. Kinesis Data Stream Applications can be created, which are data-processing applications. These applications perform the reading from a data stream in the form of data records. They use Kinesis Client Library for these operations and can run on Amazon EC2 instances. Processed records can be sent to dashboards and can be used to generate alerts, send data to other AWS services, and dynamically change advertising and pricing strategies.
+
+Core Kinesis Services:
+
+ * **Kinesis Streams**
+ * **Kinesis Firehose**
+ * **Kinesis Analytics**
+
+https://www.sumologic.com/blog/kinesis-streams-vs-firehose/
