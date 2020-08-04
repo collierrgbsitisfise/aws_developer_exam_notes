@@ -517,3 +517,29 @@ https://blog.mailtrap.io/amazon-sqs-tutorial/
 https://tutorialsdojo.com/amazon-sqs/
 
 
+# SNS (Simple Notification Service)
+
+It's make easy to set up, operate and send notifications from the cloud. It Provides developers with a highly scalable, flexible and cost-effective capability to publish messages from an apllication and immediatly delivery them to subscribers or other applications.
+
+SNS allows you to group multiple recipients using topics. A topic is an "access point" for allowing recipients to dynamicly subscribe for identical copies of the same notification.
+
+One topic can support deliveries to multiple endpoints type - for exanple, you can group together IOS, Android and SMS recipients. When you publish once to a topic, SNS delivers message to each subscriber.
+
+# SES (Simple Email Service)
+
+Scalable and highly available email service designed to help marketing teams and application developers send  markering, notification and transactional emails to their customers using a pay as you go model.
+
+Can also be used to receive emails: incomming mails can be delivered automaticaly to an S3 bucket.
+
+Incomming mails can be used to trigger Lambda functions and SNS notifications.
+
+### Difference between SNS and SES
+
+https://www.quora.com/Whats-the-difference-between-Amazon-SNS-and-SES?share=1
+https://stackshare.io/stackups/amazon-ses-vs-amazon-sns
+
+### Difference between SNS and SQS
+
+https://dev.to/exampro/sns-vs-sqs-aws-messaging-services-know-the-difference-49p
+
+https://stackoverflow.com/questions/13681213/what-is-the-difference-between-amazon-sns-and-amazon-sqs
