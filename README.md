@@ -555,3 +555,18 @@ Core Kinesis Services:
  * **Kinesis Analytics**
 
 https://www.sumologic.com/blog/kinesis-streams-vs-firehose/
+ 
+
+# Elastic Beanstalk
+
+Elastic Beanstalk is a service for deploying and scaling web applications development in many popular languages: JAVA, .NET, PHP, Node.js, Pythone, Ruby, Go and Docker onto widely used application server platforms like Apache Tomcat, Nginx, Passenger and IIS.
+
+Developrs can foucs on writing code and don't need to worry about any of hte underlying infrastructure needed to run the applicaions.
+
+* Faster and simplest way to deplo your application in AWS
+* Automaticaly scales your application up and down
+* You can select the EC2 instance type that is optimal for your application
+* You can retain full administrative control over the resoucer powering your application or have Elastic Beanstalk do it for you
+* Manage Platform Updates feature automatically applies ipdates your Operation System, Java, PHP, etc.
+* Monitor and manage application health via dashboard
+* Integrated with CloudWatch and X-Ray for performance data metric.
