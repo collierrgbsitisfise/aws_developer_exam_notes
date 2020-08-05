@@ -570,3 +570,36 @@ Developrs can foucs on writing code and don't need to worry about any of hte und
 * Manage Platform Updates feature automatically applies ipdates your Operation System, Java, PHP, etc.
 * Monitor and manage application health via dashboard
 * Integrated with CloudWatch and X-Ray for performance data metric.
+
+## Elastic Beanstalk Deployment Policies
+
+ * All at once
+ * Rolling
+ * Rolling with additional batch
+ * Immutable
+
+**All at once**:
+  - Deploys the new version to all instances simultaneously
+  - All of your instances are out of service while the deployment takes place.
+  - You will experience an outage while deployment is taking place - not ideal for mission-critical production systems
+  - If the update fails, you need to roll back the changes by re-deploying the original verison to all your instances.
+
+**Rolling**:
+ - Deploys the new verison in batches
+ - Each batch of insatnces is taken out service while the deployment takes place.
+ - Your envirment capacity will be reduced by the number of instances in a batch while the deployment takes place
+ - Not ideal for performance sensetive systems
+ - If the update fails, you need perform an additional rolling update to roll back the changes.
+
+**Rolling with additional batch**:
+  - Launches an additional batch of instaces
+  - Deplys the new version in batches
+  - Maintains fully capacity during the deployment process.
+  - If the update fails, you need to perform an additional rolling update to roll back the changes.
+
+**Immutable**:
+  - Deploys the new version to a fresh group of instances in their own new autoscaling group.
+  - When the new instances pass their health checks, they are moved to your existing auto scaling group and finaly the old instances are terminated.
+  - Maintains full capacity during the deployment process.
+  - The impact of failed updated is far less, and the rollback process requires only terminating the new auto scaling group.
+  - Preferred option for Mission Critical production systems.
