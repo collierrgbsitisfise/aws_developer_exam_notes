@@ -603,3 +603,41 @@ Developrs can foucs on writing code and don't need to worry about any of hte und
   - Maintains full capacity during the deployment process.
   - The impact of failed updated is far less, and the rollback process requires only terminating the new auto scaling group.
   - Preferred option for Mission Critical production systems.
+
+
+# CI/CD
+
+CI - continuous integration
+CD - continuous Delivery/Deployment
+
+Make small changes & automate everything. Samll, incremental code changes. Automate as possible e.g code integration, build, test and deployment.
+
+https://dev.to/testingnews1/ci-cd-101-all-you-need-to-know-4j04
+
+https://www.infoworld.com/article/3271126/what-is-cicd-continuous-integration-and-continuous-delivery-explained.html
+
+### AWS developer tools:
+-  **CodeCommit** - source and version control
+-  **CodeBuild** - compiles source code, runs tests and produces packages that are ready to deploy
+-  **CodeDeploy** - Automated Deployment to any instance, including EC2, Lambda and on-premises.
+-  **CodePipeline** - Manage the workflow, end-to-end solution, build test and deploy your application every time there is a code change.
+
+CI/CD whitepaper - https://d1.awsstatic.com/whitepapers/DevOps/practicing-continuous-integration-continuous-delivery-on-AWS.pdf
+
+# CodeDeploy
+
+CodeDeploy  Deployment Approaches:
+ * In-Place - the application is stopped on each instance and the new release is installed. Also known as Rolling Updated.
+ * Blue / Green - new instaces are provisioned and the new releases is installed on the new instances. Blue represents the active deployment, green is the new release.
+
+**In-place**
+ - Capacity is reduced during the deployment
+ - Lambda is not supported
+ - Rolling back involves a re-deploy
+ - Great when deploying the first time
+
+**Blue/Green**
+ - No capacity reduction
+ - Green instances can be created ahead of time
+ - Easy to switch between old and new.
+ - You pay for 2 environments unitl you terminate the old servers.
