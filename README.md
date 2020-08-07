@@ -649,3 +649,14 @@ A fully manage CI/CD Service.
  - Automated Realease Process. Fast, consistent, fewer mistakes. Enables quick release of new features and bug fixes.
  - CodePipeline integrates with: CodeComit, CodeDeploy, GitHub, Jenkins, Elastic Beanstalk, CloudFormation, Lambda, Elastic Container Service.
 
+# Elastic Container Service
+
+ECS - a container orchestration service which supports Docker and Windows Containers. Quickly deploy and scale containerized workloads without having to install, configurem manage and scale your own orchestration platform. ECS is built to perform at scale, offers high availability and security, and is deeply integrated with a variety of AWS services, including Elastic Load Balancing, Amazon VPC, AWS IAM, and more. Additionally, Amazon ECS features AWS Fargate, so you can deploy containers without provisioning servers, ultimately reducing management overhead.
+
+ - Cluster of  Virtual Machines. ECS will run your containers on cluster of virtual machines.
+ - Farget for Serverless. Use Farget for Serverless containers and you don't need to worry about the underlying EC2 instances !
+ - EC2 for more control.If you want to control the installation, configuration and management of your compute environment.
+
+https://d1.awsstatic.com/whitepapers/DevOps/running-containerized-microservices-on-aws.pdf
+
+https://12factor.net/
