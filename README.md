@@ -641,3 +641,11 @@ CodeDeploy  Deployment Approaches:
  - Green instances can be created ahead of time
  - Easy to switch between old and new.
  - You pay for 2 environments unitl you terminate the old servers.
+
+# CodePipeline
+
+A fully manage CI/CD Service.
+ - Orchestrate Build, Test & Deployment. The pipeline is triggered every time there is a change to your code.
+ - Automated Realease Process. Fast, consistent, fewer mistakes. Enables quick release of new features and bug fixes.
+ - CodePipeline integrates with: CodeComit, CodeDeploy, GitHub, Jenkins, Elastic Beanstalk, CloudFormation, Lambda, Elastic Container Service.
+
