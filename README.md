@@ -660,3 +660,20 @@ ECS - a container orchestration service which supports Docker and Windows Contai
 https://d1.awsstatic.com/whitepapers/DevOps/running-containerized-microservices-on-aws.pdf
 
 https://12factor.net/
+
+# CloudForamtion
+
+It's a service that allows you to manage, configure and provision your AWS infrastructure as code. Resources are defined using a CloudFormation template. CloudFormation interprets the template and makes the appropriate API calls to create the resources you have defined. Supports **YAML** and **JSON**.
+
+CloudFormation Benefits:
+ - Infrastructure is provisioned consistently, with fewer mistakes.
+ - Less time and effort than configuring things manually
+ - You can verison control and peer review you templates.
+ - Free to use
+ - Can be used to manage updates and dependencies
+ - Can be used to rollback and delete the entire stack as well
+
+
+**Resources** is the only mandatory section of the CloudFormation
+
+**Transform** section is used to reference additioonal code stored in S3, allowing for code re-use, e.g for Lambda coder template snippets - reusable pieces of CloudFormation code.
