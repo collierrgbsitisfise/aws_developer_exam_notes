@@ -697,6 +697,9 @@ User Pools - are user directories used to manage sign-up and  sign-in functional
 
 Identity Pools - enable you to create unique identites for your users and authinticate them with identity providers. With an identity, toy can obtain temporary, limited-privilege AWS credentials to access other AWS services.
 
+
+<img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fscriptcrunch.com%2Fwp-content%2Fuploads%2F2016%2F08%2Faws-iam-sts.png&f=1&nofb=1" />
+
 # Advanced IAM Policies
 
 Identity Access Management (IAM) is used to define user access permissions within AWS. There are 3 different types of IAM policies available:
@@ -708,4 +711,11 @@ Identity Access Management (IAM) is used to define user access permissions withi
 
 **Customer Managed Policies** - is a standalone policy that you create and administrate inside your own AWS account. You can attach this policy to multiple users groups and  role - but only within your own account.
 
-**Inline Policies** - is an IAM plicy which is actualy embedded within the user, group or role it applies. There is a strict 1:1 relationship between the entity and policy. When you delete the user/group/role in which the inline policy is embedded the policy will also be deleted.
+**Inline Policies** - is an IAM plicy which is actualy embedded within the user, group or role it applies. There is a strict 1:1 relationship between the entity and policy. When you delete the user/group/role in which the inline policy is embedded the policy will also be deleted.]
+
+
+# STS (Security Token Service) 
+
+**assume-role-with-web-identity** is an API provide by STS (Security Token Service).Returns temporary security credentials for users authenticated by a mobile or web application using a Web ID provider like Amazone, Facebook, Google, etc. Cognito recommended for mobile applications. Regular web applications can use the STS assume-role-with-web-identity API.
+
+<img src="https://d2908q01vomqb2.cloudfront.net/22d200f8670dbdb3e253a90eee5098477c95c23d/2016/09/24/BrianWagner_stsAssumeRole.png" />
