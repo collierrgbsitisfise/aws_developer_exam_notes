@@ -677,3 +677,22 @@ CloudFormation Benefits:
 **Resources** is the only mandatory section of the CloudFormation
 
 **Transform** section is used to reference additioonal code stored in S3, allowing for code re-use, e.g for Lambda coder template snippets - reusable pieces of CloudFormation code.
+
+# Web Identity Federation
+
+Web Identity Federation lets you give your users access to AWS resources after they have successfully authenticated with a web-based identity provider like Amazone, Facebook, Google. Following successful auteintication, the user receives an authintication code from the Web ID provider, which they can trade temporary AWS security credentials.
+
+## Amazone Cognito
+
+Amazone Cognito - provides Web Identity Federation with the following features:
+ * Sign-up and sign-in to your apps
+ * Access for guest users
+ * Act as Identity Broker between your application and Web ID providers, so you don't need to write ant additional code
+ * Synchronize user data for multiple devies
+ * Recommended for all mobile aplications AWS services.
+
+## Cognito User Pools
+
+User Pools - are user directories used to manage sign-up and  sign-in functionality for mobile and web applications. User can sign-in directly to the User Pool or inderictly via an identity provider like Facebook, Amazone or Google. Cognito acts as Identity Broker between the ID provider and AWS. Successful authentication generates a number of JSON Web tokens(JWTs).
+
+Identity Pools - enable you to create unique identites for your users and authinticate them with identity providers. With an identity, toy can obtain temporary, limited-privilege AWS credentials to access other AWS services.
