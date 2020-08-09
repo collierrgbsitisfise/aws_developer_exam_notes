@@ -696,3 +696,16 @@ Amazone Cognito - provides Web Identity Federation with the following features:
 User Pools - are user directories used to manage sign-up and  sign-in functionality for mobile and web applications. User can sign-in directly to the User Pool or inderictly via an identity provider like Facebook, Amazone or Google. Cognito acts as Identity Broker between the ID provider and AWS. Successful authentication generates a number of JSON Web tokens(JWTs).
 
 Identity Pools - enable you to create unique identites for your users and authinticate them with identity providers. With an identity, toy can obtain temporary, limited-privilege AWS credentials to access other AWS services.
+
+# Advanced IAM Policies
+
+Identity Access Management (IAM) is used to define user access permissions within AWS. There are 3 different types of IAM policies available:
+ * Managed Policies
+ * Customer Managed Policies
+ * Inline Policies
+
+**Managed Policies** - is an IAM policy which is created and administered by AWS. AWS provide Managed Policies for customer use  caseson job function e. ***AmazoneDynamoDBFullAccess***, ***AWSCodeCommitPowerUser***, etc. The AWS-provided policies allow you to assign  apprpriate  permission to your users, groups and roles without having to write the policy yourself.
+
+**Customer Managed Policies** - is a standalone policy that you create and administrate inside your own AWS account. You can attach this policy to multiple users groups and  role - but only within your own account.
+
+**Inline Policies** - is an IAM plicy which is actualy embedded within the user, group or role it applies. There is a strict 1:1 relationship between the entity and policy. When you delete the user/group/role in which the inline policy is embedded the policy will also be deleted.
