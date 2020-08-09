@@ -718,4 +718,4 @@ Identity Access Management (IAM) is used to define user access permissions withi
 
 **assume-role-with-web-identity** is an API provide by STS (Security Token Service).Returns temporary security credentials for users authenticated by a mobile or web application using a Web ID provider like Amazone, Facebook, Google, etc. Cognito recommended for mobile applications. Regular web applications can use the STS assume-role-with-web-identity API.
 
-<img src="https://d2908q01vomqb2.cloudfront.net/22d200f8670dbdb3e253a90eee5098477c95c23d/2016/09/24/BrianWagner_stsAssumeRole.png" />
+<img src="https://d2908q01vomqb2.cloudfront.net/22d200f8670dbdb3e253a90eee5098477c95c23d/2016/09/24/BrianWagner_stsAssumeRole.png" /> 
