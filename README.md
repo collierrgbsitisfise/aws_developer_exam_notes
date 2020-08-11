@@ -718,4 +718,59 @@ Identity Access Management (IAM) is used to define user access permissions withi
 
 **assume-role-with-web-identity** is an API provide by STS (Security Token Service).Returns temporary security credentials for users authenticated by a mobile or web application using a Web ID provider like Amazone, Facebook, Google, etc. Cognito recommended for mobile applications. Regular web applications can use the STS assume-role-with-web-identity API.
 
-<img src="https://d2908q01vomqb2.cloudfront.net/22d200f8670dbdb3e253a90eee5098477c95c23d/2016/09/24/BrianWagner_stsAssumeRole.png" /> 
+<img src="https://d2908q01vomqb2.cloudfront.net/22d200f8670dbdb3e253a90eee5098477c95c23d/2016/09/24/BrianWagner_stsAssumeRole.png" />
+
+# Cloudwatch 
+
+It's a monitoring service to monitor AWS resources, as well as the applications that you run on AWS.
+
+Cloudwatch can monitor things like:
+   * Compute
+     * Autoscaling Groups
+     * Elastic Load balancers
+     * Rout53 Health Checks
+    * Storage & Content Delivery
+      * EBS Vlumes
+      * Storage Gateways
+      * CloudFront
+    * Database & Analytics
+      * DynamoDB
+      * Elasticache Nodes
+      * RDS Instances
+      * Elastic MapReduce Job Flows
+      * Redshift
+    * Other
+      * SNS Topics
+      * SQS Queues
+      * Opsworks
+      * CloudWatch Logs
+      * Esimated Charges on your AWS Bill
+
+
+Host Level Metrics Consists of:
+  - CPU
+  - Network
+  - Disk
+  - Status Check
+
+**Exam Tip** : RAM Utilization is a custome metric ! By default EC2 monitoring is 5 minute intervals, unless you enable detailed monitoring which will then make it 1 minute intervals.
+
+You can retrive data using the GetMetricStatistic API or by using third party tools offered by AWS partners. 
+
+You can stroe you log data in CloudWatch Logs for as long as you want. Be default, CloudWatch Logs will store your data indefinitely. You can change the retation for each Log Group at any time.
+
+### Metric Granularity.
+
+It depends on the AWS service. Many default metrics for many default services are 1 minute, but it can be 3 or 5 minute depending on the service.
+
+**Exam Tip** : For custome metrics the minimum granularity that you can have is 1 minute.
+
+### CloudWatch Alarms
+
+You can create an alarm to monitor any Amazon CloudWatch metric in your account. This can include EC2 CPU Utilization, Elastic Load Balancer Latancy or even the charges on your AWS bill. You can set the appropriate thresholds in which to trigger the alarms and also set what actions should be taken if an alarm state is reached.
+
+### CloudWath vs CloudTrail vs Config
+
+* CloudWatch monitors performance
+* CloudTrail monitors API calls in the AWS platform
+* AWS Config records the state of your AWS environment and can notify you of changes.
