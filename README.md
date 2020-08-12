@@ -516,6 +516,25 @@ There are two types of Queue:
 https://blog.mailtrap.io/amazon-sqs-tutorial/
 https://tutorialsdojo.com/amazon-sqs/
 
+### SQS Delay Queues - postpone delivery of new messages
+
+  * Postpone delivery of new messages to a queue for a number of seconds
+  * Messages sent to the **Delay Queue** remain invisible to consumer for duration of the delay period
+  * Default delay is 0 seconds  maximu is 900
+  * For standart queues, changing the settings does't affect delay of messages already in the queue, only new messages
+  * For FIFO queue, this affects the delay of messasages already in the queue
+
+When should you use Delay Queue ?
+ - Large distributed applications which may need to introduce a delay in processing
+ - You need to apply a delay to an entire queue of messages.
+ - e.g adding a delay of a few seconds, to allow for updates to your sales and stack control databases before sending a notification to  a customer confirming an online transaction.
+
+### Managing Large SQS Messages
+
+Best Practice for manage Large SQS Messages Using S3:
+ - For large SQS messages 256KB up to 2GB in size
+ - Use S3 to store the messages
+ - Use Amazone SQS Extended Client Library for Java to manage them
 
 # SNS (Simple Notification Service)
 
