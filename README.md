@@ -360,6 +360,10 @@ X-RAY integrates with the following AWS services:
   * Amazone EC2
   * AWS Elastic Beanstalk
 
+## Concurrent Execution
+ * Default is 1000 per region
+ * If concurreny > limit, you will see TooManyREquestsException (HTTP status code - 429)
+ * **Reserved concurrency** guaranty that a set number of executions which will alaways be available for your critical function.
 # DynamoDB
 
 DynamoDB is a fast and flexible NoSQL database service for all applications that need consistent, single-digit mulliseconds latency at any scale. It is a fully managed database and supports both document and key-value data models. Is is flexible data model and relible performance make it great fit for modbile, web, gamin, ad-tech, IoT applications.
@@ -732,7 +736,10 @@ Identity Access Management (IAM) is used to define user access permissions withi
 
 **Inline Policies** - is an IAM plicy which is actualy embedded within the user, group or role it applies. There is a strict 1:1 relationship between the entity and policy. When you delete the user/group/role in which the inline policy is embedded the policy will also be deleted.]
 
-
+### IAM Policy Simulator
+  * Test the effects of IAM policies before commiting them to production
+  * Validate that the policy works as expected
+  * Test policies already attached to existing users - great for troubleshooting an issue which you suspect is IAM related.
 # STS (Security Token Service) 
 
 **assume-role-with-web-identity** is an API provide by STS (Security Token Service).Returns temporary security credentials for users authenticated by a mobile or web application using a Web ID provider like Amazone, Facebook, Google, etc. Cognito recommended for mobile applications. Regular web applications can use the STS assume-role-with-web-identity API.
