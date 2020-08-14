@@ -800,3 +800,13 @@ You can create an alarm to monitor any Amazon CloudWatch metric in your account.
 * CloudWatch monitors performance
 * CloudTrail monitors API calls in the AWS platform
 * AWS Config records the state of your AWS environment and can notify you of changes.
+
+# Lambd + VPC
+
+Enabling Lambda to Access VPC Resources
+ * To enable this, you need to allow the function to connect to the private subnet.
+ * Lambda needs the following VPC Configuration information so that it can connect to the VPC:
+  * Private subnet ID
+  * Security group Id (with required access)
+  * Lambdas uses this infomation to set up ENIs using available IP address from your private subnet.
+  
